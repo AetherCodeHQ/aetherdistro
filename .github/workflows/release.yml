@@ -1,0 +1,35 @@
+name: Cross-Platform Release
+on:
+  push:
+    tags: ['v*']
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        goos: [linux, darwin, windows]
+        goarch: [amd64, arm64]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with: { go-version: '1.23' }
+      - env:
+          GOOS: ${{ matrix.goos }}
+          GOARCH: ${{ matrix.goarch }}
+        run: |
+          EXT=""
+          if [ "$GOOS" = "windows" ]; then EXT=".exe"; fi
+          mkdir -p dist/$GOOS-$GOARCH
+          go build -o dist/$GOOS-$GOARCH/aethercli$EXT .
+      - uses: actions/upload-artifact@v4
+        with: { name: aethercli-${{ matrix.goos }}-${{ matrix.goarch }}, path: dist/ }
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { path: dist/ }
+      - run: find dist -type f -exec sha256sum {} \; > dist/checksums.txt
+      - uses: softprops/action-gh-release@v2
+        with: { generate_release_notes: true, files: dist/**/* }
