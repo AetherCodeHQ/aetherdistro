@@ -106,3 +106,26 @@ MIT License - see [LICENSE](LICENSE)
 <p align="center">
   Built with love by <a href="https://github.com/AetherCodeHQ">AetherCode</a> | <a href="https://github.com/AetherCode-Core">AetherCode Core</a>
 </p>
+
+
+---
+
+## What's New in v1.1.0
+
+- Professional documentation with badges
+- CI/CD pipeline with GitHub Actions
+- Security analysis with CodeQL
+- Dependency management with Dependabot
+- Code quality with GolangCI-Lint
+- Issue and PR templates
+- Contributing guidelines
+
+## Categories
+
+| Category | Description |
+|----------|-------------|
+| DevOps & Infrastructure | This project is part of the AetherCode ecosystem |
+
+## Related Projects
+
+Part of [AetherCode Core](https://github.com/AetherCode-Core) ecosystem.
