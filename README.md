@@ -4,7 +4,7 @@
 ![License](https://img.shields.io/badge/License-MIT-00ADD8?style=for-the-badge)
 ![CI](https://img.shields.io/badge/CI-GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
 ![CodeQL](https://img.shields.io/badge/CodeQL-Security-00ADD8?style=for-the-badge)
-![Version](https://img.shields.io/badge/Version-v1.0.0-00ADD8?style=for-the-badge)
+![Version](https://img.shields.io/badge/Version-v2.0.0-00ADD8?style=for-the-badge)
 
 > Automated cross-platform binary distribution with Homebrew, Scoop, and APT support
 
@@ -62,7 +62,7 @@ go build -o aetherdistro .
 
 ## Usage
 
-./aetherdistro release --version v1.2.0 --binary mytool  OR  ./aetherdistro publish --homebrew --scoop --apt
+./aetherdistro release --version v2.0.0 --binary mytool  OR  ./aetherdistro publish --homebrew --scoop --apt
 
 ---
 
@@ -110,7 +110,7 @@ MIT License - see [LICENSE](LICENSE)
 
 ---
 
-## What's New in v1.1.0
+## What's New in v2.0.0
 
 - Professional documentation with badges
 - CI/CD pipeline with GitHub Actions
