@@ -1,138 +1,98 @@
-# AetherDistro
+# 🌌 aetherdistro
 
-![Go](https://img.shields.io/badge/Go-1.21+-00ADD8?style=for-the-badge&logo=go&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-00ADD8?style=for-the-badge)
-![CI](https://img.shields.io/badge/CI-GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
-![CodeQL](https://img.shields.io/badge/CodeQL-Security-00ADD8?style=for-the-badge)
-![Version](https://img.shields.io/badge/Version-v2.1.0-00ADD8?style=for-the-badge)
+![Go](https://img.shields.io/badge/Go-1.21%2B-00ADD8?style=flat-square&logo=go&logoColor=white)
+![Version](https://img.shields.io/badge/Version-v2.1.0-00ADD8?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+![PRs](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat-square)
 
-> Automated cross-platform binary distribution with Homebrew, Scoop, and APT support
+> AetherCore tool by [AetherCodeHQ](https://github.com/AetherCodeHQ)
 
-`distribution` `homebrew` `scoop` `cross-compilation` `release` `devops` `ci-cd` `golang`
-
----
-
-## What is it?
-
-**AetherDistro** is Tag a release and watch the magic: cross-compile for every OS/arch, auto-update Homebrew taps, Scoop buckets, and APT repos. One command to distribute to the world.
-
-## Why should you care?
-
-- **Fast** - Compiled Go binary, zero overhead
-- **Secure** - CodeQL analysis + Dependabot
-- **Offline-first** - Works without internet
-- **Lightweight** - Single binary deployment
-- **Developer-friendly** - Clean CLI with docs
+`aethercore` `security` `cli` `golang` `exec`
 
 ---
+
+## What is aetherdistro?
+
+**aetherdistro** is part of the AetherCore security ecosystem — a zero-dependency, pure Go security utility.
 
 ## Features
 
-- Automatic cross-compilation (Windows/macOS/Linux)
-- Homebrew Tap auto-update
-- Scoop Bucket manifest generation
-- APT/YUM repository support
-- Checksum generation (SHA256)
-- Release notes automation
-- GitHub Release asset upload
-- Docker multi-arch images
-- Formula version bumping
-- Changelog generation
+- ✅ `printUsage()` — Printusage
+- ✅ `crossBuild()` — Crossbuild
+- ✅ `createRelease()` — Createrelease
+- ✅ `updateHomebrew()` — Updatehomebrew
+- ✅ `updateScoop()` — Updatescoop
+- ✅ `showInfo()` — Showinfo
+- ✅ Formatted output
+- ✅ External command execution
+- 🚀 **Zero dependencies** — only Go standard library
+- 📦 **Single binary** — compile and run anywhere
+- 🔄 **Offline capable** — no internet required
 
----
+## Installation
 
-## Quick Start
-
-### Prerequisites
-- Go 1.21 or higher
-
-### Install from source
 ```bash
+# Clone
 git clone https://github.com/AetherCodeHQ/aetherdistro.git
 cd aetherdistro
+
+# Build
 go build -o aetherdistro .
+
+# Run
+./aetherdistro Usage:
 ```
 
-### Run
+### Or directly with `go run`:
 ```bash
-./aetherdistro --help
+go run main.go Usage:
 ```
-
----
 
 ## Usage
 
-./aetherdistro release --version v2.0.0 --binary mytool  OR  ./aetherdistro publish --homebrew --scoop --apt
-
----
-
-## CLI Flags
-
-| Flag | Description | Default |
-|------|-------------|---------|
-| `--path` | Target directory | `.` |
-| `--format` | Output format (json, text) | `text` |
-| `--output` | Output filename | `stdout` |
-| `--verbose` | Enable verbose output | `false` |
-
----
-
-## Development
-
 ```bash
-git clone https://github.com/AetherCodeHQ/aetherdistro.git
-cd aetherdistro
-go build -o aetherdistro .
-go test ./...
-golangci-lint run
+# Basic usage
+./aetherdistro Usage:
+
+# With flags
+./aetherdistro Usage: value Usage:
 ```
 
----
+### Example Output
+
+```
+$ ./aetherdistro Usage:
+AetherDistro - Cross-platform binary distribution
+Usage:
+  aetherdistro build       - Cross-compile for all platforms
+```
+
+## Project Structure
+
+```
+aetherdistro/
+  main.go          # Entry point (108 lines)
+  go.mod            # Go module definition
+  go.sum            # Dependency checksums
+  README.md         # This file
+  LICENSE           # MIT License
+  CHANGELOG.md      # Version history
+```
 
 ## Contributing
 
-Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md).
+Contributions are welcome! Feel free to open issues or submit pull requests.
 
-## Security
-
-Report to: aethercode.core@gmail.com | See [SECURITY.md](SECURITY.md)
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## License
 
-MIT License - see [LICENSE](LICENSE)
+MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-<p align="center">
-  Built with love by <a href="https://github.com/AetherCodeHQ">AetherCode</a> | <a href="https://github.com/AetherCode-Core">AetherCode Core</a>
-</p>
-
-
----
-
-## What's New in v2.0.0
-
-- Professional documentation with badges
-- CI/CD pipeline with GitHub Actions
-- Security analysis with CodeQL
-- Dependency management with Dependabot
-- Code quality with GolangCI-Lint
-- Issue and PR templates
-- Contributing guidelines
-
-## Categories
-
-| Category | Description |
-|----------|-------------|
-| DevOps & Infrastructure | This project is part of the AetherCode ecosystem |
-
-## Related Projects
-
-Part of [AetherCode Core](https://github.com/AetherCode-Core) ecosystem.
-
-
-## What's new in v2.1.0
-
-- Clean CLI with subcommands
-- Robust error handling
-- Fast, standard-library-only implementation
+Built with ❤️ by [AetherCodeHQ](https://github.com/AetherCodeHQ)

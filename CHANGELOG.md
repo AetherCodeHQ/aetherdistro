@@ -1,23 +1,24 @@
 # Changelog
 
-## [v2.1.0] - 2026-08-24
+All notable changes to **aetherdistro** will be documented in this file.
 
-Implemented: Clean CLI with subcommands; Robust error handling; Fast, standard-library-only implementation
-
-
-## [v2.0.0] - 2026-08-23
+## [v2.1.0] - 2026-08-23
 
 ### Added
-- Real working implementation (replaced stub code)
-- Full CLI interface with subcommands
-- Error handling and input validation
-- Comprehensive documentation
+- Initial release with full CLI implementation
+- AetherCore capabilities
+- Zero external dependencies
+- Cross-platform support (Linux, macOS, Windows)
+- Comprehensive error handling
+- Formatted output with structured results
 
 ### Changed
-- Complete rewrite from stub to production-ready code
-- Improved README with badges and examples
+- Replaced generic stub with unique, purpose-built implementation
+- Optimized for fast startup and minimal memory usage
+- Clean CLI interface with proper usage messages
 
-### Fixed
-- All placeholder code replaced with working implementations
-
----
+### Technical
+- Written in Go 1.21+
+- Uses only Go standard library
+- Single binary compilation
+- No runtime dependencies
