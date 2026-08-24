@@ -1,5 +1,10 @@
 # Changelog
 
+## [v2.1.0] - 2026-08-24
+
+Implemented: Clean CLI with subcommands; Robust error handling; Fast, standard-library-only implementation
+
+
 ## [v2.0.0] - 2026-08-23
 
 ### Added
@@ -16,4 +21,3 @@
 - All placeholder code replaced with working implementations
 
 ---
-*Auto-updated by AetherCode*
